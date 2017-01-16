@@ -1,0 +1,9 @@
+define('aileen/tests/controllers/work/edit/project/edit/media/new.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/work/edit/project/edit/media/new.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/work/edit/project/edit/media/new.js should pass jshint.\ncontrollers/work/edit/project/edit/media/new.js: line 110, col 51, Expected \'===\' and instead saw \'==\'.\ncontrollers/work/edit/project/edit/media/new.js: line 119, col 37, Missing semicolon.\ncontrollers/work/edit/project/edit/media/new.js: line 64, col 9, \'gapi\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 65, col 9, \'gapi\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 93, col 28, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 94, col 23, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 95, col 23, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 96, col 23, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 97, col 27, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 110, col 18, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 110, col 52, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 111, col 26, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 113, col 27, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 115, col 65, \'google\' is not defined.\ncontrollers/work/edit/project/edit/media/new.js: line 117, col 28, \'google\' is not defined.\n\n15 errors');
+  });
+});

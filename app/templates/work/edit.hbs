@@ -1,0 +1,60 @@
+
+{{#if isWorkEdit}}
+
+
+
+<form class="form-container box">
+  
+{{#unless model.image}}
+  <div class="upload-new-image">
+    <button class="upload-new-image-plus" {{action "changeImage" model.id}}>+</button>
+    <button class="upload-new-image-text" {{action "changeImage" model.id}}>Change Image</button>
+  </div>
+{{/unless}}
+
+  {{#if model.image}}
+  <div class="upload-new-image">
+    <img class="upload-new-image-image" src={{model.image}}>
+    <button class="upload-new-image-text" {{action "changeImage" model.id}}>Change Image</button>
+  </div>
+  {{/if}}
+
+  <div class="form-control">
+    <div class="control">
+      <label class="label">Workplace</label>
+      {{input type="text" class="input" value=model.workplace}}
+    </div>
+    <div class="control">
+      <label class="label">Role</label>
+      {{input type="text" class="input" value=model.role}}
+    </div>
+    <div class="control">
+      <label class="label">Description</label>
+      {{textarea class="textarea" value=model.description}}
+    </div>
+    <div class="control">
+      <label class="label">Start Date</label>
+      {{input type="date" class="input" value=model.startDate}}
+    </div>
+    <div class="control">
+      <label class="label">End Date</label>
+      {{input type="date" class="input" value=model.endDate}}
+    </div>
+    <div class="control">
+    <br>
+    <button class="button is-primary" {{action 'editWork' model.id}}>Save Work</button>
+    <button class="button is-danger" {{action 'deleteWorkWarning' model.id}}>Delete Work</button> 
+    {{#link-to 'work' class="button is-link"}}Close{{/link-to}}
+    </div>
+  </div>
+</form>
+
+<br>
+<br> 
+{{/if}}
+
+
+{{outlet}}
+
+
+

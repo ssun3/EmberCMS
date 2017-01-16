@@ -1,0 +1,1 @@
+/Users/susansun/Programming/Ember/aileen/tmp/funnel-input_base_path-nv5DUp8c.tmp/app-config.js

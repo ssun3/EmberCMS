@@ -1,0 +1,26 @@
+<div class="work-image">
+
+    {{#link-to 'work.projects' work.id}}<p class="work-projects-link">View Projects</p><img src={{work.image}} alt="{{work.workplace}}">{{/link-to}}
+
+
+</div>
+<div class="work-description">
+  <p class="work-details"><span class="work-role">{{work.role}} - </span>{{work.description}}</p>
+  <p class="work-dates">{{format-date work.startDate}} - {{format-date work.endDate}}</p>
+{{#if isProjects}}
+  <p class="work-projects">{{projectsCount}} {{isProjectsPlural}}</p>
+{{/if}}
+</div>
+
+      
+
+      <p>
+      {{#if session.isAuthenticated}}
+
+        {{#link-to 'work.edit' work.id}}
+          Edit WORK
+        {{/link-to}}
+        
+      {{/if}}
+      </p>
+     

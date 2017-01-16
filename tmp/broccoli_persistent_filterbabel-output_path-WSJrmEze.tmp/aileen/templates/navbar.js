@@ -1,0 +1,3 @@
+define("aileen/templates/navbar", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template({ "id": "oGEtq/++", "block": "{\"statements\":[[\"block\",[\"link-to\"],[\"work\"],null,1],[\"text\",\"\\n\"],[\"block\",[\"link-to\"],[\"about\"],null,0]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"  About\\n\"]],\"locals\":[]},{\"statements\":[[\"text\",\"  Work\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "aileen/templates/navbar.hbs" } });
+});

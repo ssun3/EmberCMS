@@ -1,0 +1,28 @@
+<div class="projects_page">
+  <div class="work-component-individual">
+
+    <img src={{model.image}} alt="{{model.workplace}}" class="work-component-individual__image"> 
+
+    <div class="work-component-individual__description">
+      <p class="work-component-individual__description__paragraph"><span class="work-role">{{model.role}} - </span>{{model.description}}</p>
+      <p class="work-component-individual__description__dates">{{format-date model.startDate}} - {{format-date model.endDate}}</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+    {{#if session.isAuthenticated}}
+      <div class="project-component">
+        <div class="create-new">
+        {{#link-to 'work.edit.project.new' model.id class="create-new-link"}}
+        +
+      {{/link-to}}
+        </div>
+      </div>
+    {{/if}}
+  {{#each model.projects as |project|}}
+    {{project-component project=project class="project-component"}}
+  {{/each}}
+
+  </div>
+
+</div>

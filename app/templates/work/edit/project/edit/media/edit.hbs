@@ -1,0 +1,34 @@
+<p>EDIT MEDIA PAGE</p>
+ 
+<form id="edit-project-form">
+  <div class="form-group">
+    <label>Title</label>
+    {{input type="text" class="form-control" value=model.title}}
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    {{textarea class="form-control" value=model.description}}
+  </div>
+
+  <button {{action 'changeMedia' model.id}}>change media</button>
+{{!--   <div class="form-group">
+    <label>Is Main Image?</label>
+    {{input type="checkbox" name="isMainImage" class="form-control" checked=isMainImage}}
+  </div> --}}
+
+
+  <div class="detail-work-image">
+  {{#if model.isVideo}}<iframe src={{model.url}} width="640" height="480"></iframe> {{/if}}
+  {{#if model.isImage}}<img src={{model.url}}>{{/if}}
+  </div>
+
+  
+
+  <button {{action 'editMedia' model.id}}>Save Media</button>
+  <button {{action 'deleteMedia' model.id model.project.id}}>Delete Media</button>
+  {{#link-to 'work.edit.project.edit.media.index'}}Close{{/link-to}}
+</form>
+
+
+
+

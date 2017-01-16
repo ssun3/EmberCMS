@@ -1,0 +1,28 @@
+
+
+
+ 
+
+<div id="work-components-container">
+  
+  <div class="work-component work-head"> 
+    <h1>Hi, I'm Aileen. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+  </div>
+
+  {{#if session.isAuthenticated}}
+    <div class="work-component">
+      <div class="create-new">
+      {{#link-to 'work.new' class="create-new-link"}}
+      +
+    {{/link-to}}
+      </div>
+    </div>
+  {{/if}}
+
+  {{#each model as |work|}}
+    {{work-component work = work class="work-component"}} 
+  {{/each}}
+
+  
+</div>
+

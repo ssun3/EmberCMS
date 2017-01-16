@@ -1,0 +1,115 @@
+/* 
+
+@mixin warning {
+  background-color: orange;
+  color: #fff;
+}
+
+.warning-button{
+  @include warning;
+  padding: 8px 12px;
+}
+///TESTING
+
+//ANOTHER TEST MIXIN WITHIN A MIXIN
+@mixin rounded($radius: 6px){   // 6px is default value
+  border-radius: $radius;
+}
+
+@mixin box($radius: 6px, $border: 1px solid #000) {
+  @include rounded($radius);
+  border: $border;
+}
+
+@mixin fancy-links{
+  a {
+    font-style : italic;
+    text-decoration: none;
+  }
+}
+
+@mixin box-shadow($shadows...){ //creating variable arguments- can put in multiple arguments of the same type
+  box-shadow: $shadows; 
+}
+
+
+
+// @include fancy-links; would style the a elements at hte global level
+// 
+  using the box mixin andthe box-shadow mixin
+#header {
+  @include box(8px , 1px solid #999);
+  @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
+} 
+
+or 
+
+#header {
+  @include box($border: 1px solid #999); , explicitly state variable if parameter are out of order
+} 
+
+//ANOTHER TEST
+
+
+@mixin google-font($font, $weights...){
+  $font: unquote($font);
+  $weights: unquote($weights);
+  @import url('https://fonts.googleapis.com/css?family=#{$font}:#{$weights},');
+}
+
+//@include google-font("Roboto", "100", "300", "500", "700");
+
+
+//example with nested media query
+#main {
+  width: $content-width;
+  @media only screen and (max-width: 960px) {
+    width: auto;
+    max-width: $content-width;
+  }
+  margin-left: auto;
+  margin-right auto;
+}
+
+
+
+//MIXINS FOR MEDIA QUERIES 
+
+@mixin tiny-screens() {
+  @media only screen and (max-width: 320px){
+    @content;
+  }
+}
+
+@mixin small-screens() {
+  @media only screen and (max-width: 480px){
+    @content;
+  }
+}
+
+@mixin medium-screens() {
+  @media only screen and (max-width: 680px){
+    @content;
+  }
+}
+
+@mixin large-screens() {
+  @media only screen and (max-width: 960px){
+    @content;
+  }
+}
+
+
+// SAMPLE USE
+
+body{
+  font-family: $text-font; 
+  @include large-screens{
+    font-size: 125%;
+    width: auto;
+  }
+}
+
+
+
+ */

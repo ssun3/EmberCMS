@@ -1,0 +1,1 @@
+/Users/susansun/Programming/Ember/aileen/tmp/funnel-input_base_path-QNhPNV6e.tmp/initializer-factory.js

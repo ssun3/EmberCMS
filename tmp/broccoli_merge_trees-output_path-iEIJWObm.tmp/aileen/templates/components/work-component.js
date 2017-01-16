@@ -1,0 +1,1 @@
+/Users/susansun/Programming/Ember/aileen/tmp/broccoli_merge_trees-input_base_path-GWCSOov5.tmp/1/aileen/templates/components/work-component.js

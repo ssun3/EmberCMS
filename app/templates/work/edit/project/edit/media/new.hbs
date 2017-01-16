@@ -1,0 +1,30 @@
+<p>CREATE NEW MEDIA PAGE</p>
+ 
+<form id="new-project-form">
+  <div class="form-group">
+    <label>Title</label>
+    {{input type="text" class="form-control" value=title}}
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    {{textarea class="form-control" value=description}}
+  </div>
+
+  <button {{action 'uploadMedia'}}>upload media</button>
+{{!--   <div class="form-group">
+    <label>Is Main Image?</label>
+    {{input type="checkbox" name="isMainImage" class="form-control" checked=isMainImage}}
+  </div> --}}
+
+
+  <div class="detail-work-image">
+  {{#if isVideo}}<iframe src={{mediaURL}} width="640" height="480"></iframe> {{/if}}
+  {{#if isImage}}<img src={{mediaURL}}>{{/if}}
+  </div>
+
+  
+
+  <button {{action 'addMedia' model.id}}>Create Media</button>
+  {{#link-to 'work.edit.project.edit.media'}}Close{{/link-to}}
+</form>
+

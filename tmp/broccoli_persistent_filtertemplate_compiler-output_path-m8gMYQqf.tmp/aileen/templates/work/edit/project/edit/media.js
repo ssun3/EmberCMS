@@ -1,0 +1,1 @@
+export default Ember.HTMLBars.template({"id":"gVIiMtwi","block":"{\"statements\":[[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}","meta":{"moduleName":"aileen/templates/work/edit/project/edit/media.hbs"}});

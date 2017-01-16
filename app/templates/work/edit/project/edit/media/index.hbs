@@ -1,0 +1,19 @@
+{{#link-to 'work.edit.project.edit.media.new'}}
+ADD MEDIA
+{{/link-to}}
+
+<br>
+<br>
+
+
+{{#each model.images as |image|}}
+  <p>{{image.title}}</p> {{#link-to "work.edit.project.edit.media.edit" image.id}}Edit Media {{/link-to}}
+  {{#if image.isImage}}<img src={{image.url}}>{{/if}}
+  {{#if image.isVideo}}<iframe src={{image.url}} width="640" height="480"></iframe> {{/if}}
+{{/each}}
+
+
+
+
+
+

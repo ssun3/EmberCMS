@@ -1,0 +1,3 @@
+define("aileen/templates/work", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template({ "id": "lW6YqYx7", "block": "{\"statements\":[[\"open-element\",\"p\",[]],[\"flush-element\"],[\"text\",\"WORK PAGE\"],[\"close-element\"],[\"text\",\"\\n\\n\\n\\n\\n\\n\\n\\n\"],[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "aileen/templates/work.hbs" } });
+});

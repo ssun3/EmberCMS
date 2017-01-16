@@ -1,0 +1,20 @@
+<form {{action 'signIn' on="submit"}}>
+Email: {{input value=email type="text"}}
+
+Password: {{input value=password type="password"}}
+
+<button type="submit">Submit</button>
+
+</form>
+
+
+{{#if session.isAuthenticated}}
+  Logged in as {{session.uid}}
+{{else}}
+  Not logged in
+{{/if}}
+
+
+
+
+

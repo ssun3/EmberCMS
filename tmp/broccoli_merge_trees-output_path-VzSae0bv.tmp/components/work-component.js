@@ -1,0 +1,1 @@
+/Users/susansun/Programming/Ember/aileen/app/components/work-component.js

@@ -1,0 +1,29 @@
+ <form class="form-container box">
+  <div class="form-control">
+    <div class="control">
+      <label class="label">Project Title</label>
+      {{input type="text" class="input" value=title}}
+    </div>
+    <div class="control">
+      <label class="label">Project Subtitle</label>
+      {{input type="text" class="input" value=subtitle}}
+    </div>
+    <div class="control">
+      <label class="label">Description</label>
+      {{textarea class="textarea" value=description}}
+    </div>
+    <div class="control">
+      <label class="label">Role</label>
+      {{input type="text" class="input" value=role}}
+    </div>
+    <div class="control">
+      <label class="label">Date</label>
+      {{input type="date" class="input" value=date}}
+    </div>
+
+
+    <button class="button is-primary" {{action 'addProject' model.id}}>Create Project</button>
+    {{#link-to 'work.projects' model.id class="button is-link"}}Close{{/link-to}}
+  </div>
+</form>
+

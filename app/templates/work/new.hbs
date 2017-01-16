@@ -1,0 +1,47 @@
+<form class="form-container box">
+  
+  {{#if isEmptyImage}}
+  <div class="upload-new-image">
+    <button class="upload-new-image-plus" {{action "uploadImage" model.id}}>+</button>
+    <button class="upload-new-image-text" {{action "uploadImage" model.id}}>Upload New Image</button>
+  </div>
+  {{/if}} 
+
+  {{#unless isEmptyImage}}
+  <div class="upload-new-image">
+      <img class="upload-new-image-image"src={{imageURL}}>
+    <button class="upload-new-image-text" {{action "uploadImage" model.id}}>Upload New Image</button>
+  </div>
+  {{/unless}}
+
+
+  <div class="form-control">
+    <div class="control">
+      <label class="label">Workplace</label>
+      {{input type="text" class="input" value=workplace}}
+    </div>
+    <div class="control">
+      <label class="label">Role</label>
+      {{input type="text" class="input" value=role}}
+    </div>
+    <div class="control"> 
+      <label class="label">Description</label>
+      {{textarea class="textarea" value=description}}
+    </div>
+    <div class="control">
+      <label class="label">Start Date</label>
+      {{input type="date" class="input" value=startDate}}
+    </div>
+    <div class="control">
+      <label class="label">End Date</label>
+      {{input type="date" class="input" value=endDate}}
+    </div>
+
+    <div class="control">
+      <br>
+      <button class= "button is-primary" {{action 'addWork'}}>Create Work</button>
+      {{#link-to 'work' class="button is-link"}}Close{{/link-to}}
+    </div>
+  </div>
+</form>
+

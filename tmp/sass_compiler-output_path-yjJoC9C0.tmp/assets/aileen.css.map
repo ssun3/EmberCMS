@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "aileen.css",
+	"sourceRoot": "/Users/susansun/Programming/Ember/aileen/app/styles",
+	"sources": [
+		"../../sass_compiler-input_base_path-UyOhBMfe.tmp/app/styles/app.scss"
+	],
+	"sourcesContent": [
+		"@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');\n\nbody{\n  background-color: #f7e5d9;\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Roboto, sans-serif;\n  font-weight: 300;\n}\n\n\n#main-nav{\n  border-bottom: 1px solid #dfcfc4; \n}\n\n#main-nav ul{\n  margin: 0;\n  padding: 0;\n\n}\n\n#main-nav ul li{\n  list-style-type: none;\n  display: inline-block;\n  padding: 1.5em 0em 0.9em 2.3em;\n\n}\n\n\n#main-nav a {\n  color: #131313;\n  text-decoration: none;\n  font-size: 1em;\n}\n\n\n#main-nav a:hover {\n  font-weight: 500;\n\n}\n\n#main-nav a:active{\n  color: red;\n}\n\n#main-nav a:focus{\n  font-weight: 500;\n}\n\n//WORK EDIT PAGE\n.form-control{\n  width: 50em;\n}\n\n.hidden{\n  display:none;\n}\n\n\n// WORK PAGE\n\n#work-header{\n  border: 1px solid red;\n}\n\n#work-component-container{\n  border: 1px solid red;\n}\n\n#work-component{\n  border: 1px solid blue;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,CAAC,iEAAI;AAEZ,AAAA,IAAI,CAAA;EACF,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,kBAAkB;EAC/B,WAAW,EAAE,GAAG,GACjB;;AAGD,AAAA,SAAS,CAAA;EACP,aAAa,EAAE,iBAAiB,GACjC;;AAED,AAAA,SAAS,CAAC,EAAE,CAAA;EACV,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC,GAEX;;AAED,AAAU,SAAD,CAAC,EAAE,CAAC,EAAE,CAAA;EACb,eAAe,EAAE,IAAI;EACrB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,qBAAqB,GAE/B;;AAGD,AAAA,SAAS,CAAC,CAAC,CAAC;EACV,KAAK,EAAE,OAAO;EACd,eAAe,EAAE,IAAI;EACrB,SAAS,EAAE,GAAG,GACf;;AAGD,AAAA,SAAS,CAAC,CAAC,AAAA,MAAM,CAAC;EAChB,WAAW,EAAE,GAAG,GAEjB;;AAED,AAAA,SAAS,CAAC,CAAC,AAAA,OAAO,CAAA;EAChB,KAAK,EAAE,GAAG,GACX;;AAED,AAAA,SAAS,CAAC,CAAC,AAAA,MAAM,CAAA;EACf,WAAW,EAAE,GAAG,GACjB;;AAGD,AAAA,aAAa,CAAA;EACX,KAAK,EAAE,IAAI,GACZ;;AAED,AAAA,OAAO,CAAA;EACL,OAAO,EAAC,IAAI,GACb;;AAKD,AAAA,YAAY,CAAA;EACV,MAAM,EAAE,aAAa,GACtB;;AAED,AAAA,yBAAyB,CAAA;EACvB,MAAM,EAAE,aAAa,GACtB;;AAED,AAAA,eAAe,CAAA;EACb,MAAM,EAAE,cAAc,GACvB"
+}

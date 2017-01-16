@@ -1,0 +1,1 @@
+/Users/susansun/Programming/Ember/aileen/tmp/broccoli_merge_trees-input_base_path-sqkeKnpp.tmp/23/helpers/start-app.js
