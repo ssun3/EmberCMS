@@ -1,52 +1,16 @@
-# aileen
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A Portfolio CMS built with EMberJS
 
-## Prerequisites
+Features include:
 
-You will need the following things properly installed on your computer.
+CRUD operations on nested data models.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Bower](https://bower.io/)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Data filtering/formatting using Ember computed properties.
 
-## Installation
+Front end routing and template rendering.
 
-* `git clone <repository-url>` this repository
-* `cd aileen`
-* `npm install`
-* `bower install`
+Firebase integration with torii authentication.
 
-## Running / Development
+Google Drive access using Google Picker API
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
