@@ -1,17 +1,28 @@
-<form {{action 'signIn' on="submit"}}>
-Email: {{input value=email type="text"}}
+{{#if session.isAuthenticated}}
+  <form class="form-container box">
+    <div class="form-control">
+      <label class="label"> Logged in as {{session.uid}}</label>
+    </div>
+  </form>
+{{else}}
 
-Password: {{input value=password type="password"}}
+<form class="form-container box" {{action 'signIn' on="submit"}}>
 
-<button type="submit">Submit</button>
-
+  <div class="form-control">
+    <div class="control">
+        <label class="label">Email</label>
+        {{input type="text" class="input" value=email}}
+    </div>
+    <div class="control">
+      <label class="label">Password</label>
+      {{input type="password" class="input" value=password}}
+    </div>
+    <div class="control">
+      <button class="button is-primary" type="submit">Submit</button>
+    </div>
+  </div>
 </form>
 
-
-{{#if session.isAuthenticated}}
-  Logged in as {{session.uid}}
-{{else}}
-  Not logged in
 {{/if}}
 
 

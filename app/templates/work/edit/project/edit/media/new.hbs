@@ -1,30 +1,39 @@
-<p>CREATE NEW MEDIA PAGE</p>
- 
+
 <form id="new-project-form">
-  <div class="form-group">
-    <label>Title</label>
-    {{input type="text" class="form-control" value=title}}
+
+  {{#if isEmptyMedia}}
+    <div class="upload-new-image">
+      <button class="upload-new-image-plus" {{action "uploadMedia"}}>+</button>
+      <button class="upload-new-image-text" {{action "uploadMedia"}}>Upload New Media</button>
+    </div>
+  {{/if}} 
+
+  {{#unless isEmptyMedia}}
+    <div class="upload-new-image">
+      {{#if isVideo}}<iframe src={{mediaURL}} class="upload-new-image-image"></iframe> {{/if}}
+      {{#if isImage}}<img src={{mediaURL}} class="upload-new-image-image">{{/if}}
+      <button class="upload-new-image-text" {{action "uploadMedia"}}>Upload New Media</button>
+    </div>
+  {{/unless}}
+
+
+
+
+
+
+  <div class="form-control">
+    <div class="control">
+      <label>Title</label>
+      {{input type="text" class="input" value=title}}
+    </div>
+    <div class="control">
+      <label>Description</label>
+      {{textarea class="textarea" value=description}}
+    </div>
+    <div class="control">
+      <button class="button is-primary"{{action 'addMedia' model.id}}>Create Media</button>
+      {{#link-to 'work.edit.project.edit.media' class="button is-link"}}Close{{/link-to}}
+    </div>
   </div>
-  <div class="form-group">
-    <label>Description</label>
-    {{textarea class="form-control" value=description}}
-  </div>
-
-  <button {{action 'uploadMedia'}}>upload media</button>
-{{!--   <div class="form-group">
-    <label>Is Main Image?</label>
-    {{input type="checkbox" name="isMainImage" class="form-control" checked=isMainImage}}
-  </div> --}}
-
-
-  <div class="detail-work-image">
-  {{#if isVideo}}<iframe src={{mediaURL}} width="640" height="480"></iframe> {{/if}}
-  {{#if isImage}}<img src={{mediaURL}}>{{/if}}
-  </div>
-
-  
-
-  <button {{action 'addMedia' model.id}}>Create Media</button>
-  {{#link-to 'work.edit.project.edit.media'}}Close{{/link-to}}
 </form>
 

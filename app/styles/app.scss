@@ -3,6 +3,7 @@
 @import '../../bower_components/bulma/sass/grid/_all';
 @import '../../bower_components/bulma/sass/elements/_all';
 @import '../../bower_components/bulma/sass/components/_all';
+@import '../../bower_components/flickity/dist/flickity.min';
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,700');
 @import 'base/variables';
 
@@ -16,10 +17,28 @@ body{
   font-weight: 300;
 }
 
-//Nav bar Styles
-#main-nav{
-  border-bottom: 1px solid #dfcfc4; 
+
+#hide-scrollbar{
+  height: 38em;
+  overflow: hidden;
 }
+
+//login 
+.sign-out-btn{
+  position: absolute;
+  right:1em;
+  top: 2%;
+}
+
+//login
+
+.outlet-container{
+  border-top: 1px solid #dfcfc4; 
+  overflow-x: auto;
+  min-height: 90vh;
+}
+
+//Nav bar Styles
 
 #main-nav ul{
   margin: 0;
@@ -61,6 +80,31 @@ body{
 //WORK INDEX PAGE
 
 
+.arrow{
+  display: inline-block;
+  margin-top: 1em;
+  img {
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#rightarrow{
+  transform: scale(-1, 1);
+  margin-left: 0.3em;
+}
+
+.arrow_instructions{
+  position: relative;
+  font-size: 1em;
+  color: #b1a38b;
+  display: inline-block;
+  margin-left: 1em;
+  top: -1em;
+}
+
 .create-new{
   box-sizing: border-box;
   border: 2px dashed grey; 
@@ -70,17 +114,50 @@ body{
 }
 
 .create-new-link{
-  font-size: 10em;
-  font-weight: 100;
-  color: grey;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: block;
+  overflow: hidden;
   text-decoration: none;
-  position: relative;
-  top: calc(50% - 0.6em);
+
+  .upload-new-work-plus{
+    position: relative;
+    width: 100%;
+    height: 8em;
+    font-size: 8em;
+    vertical-align: middle;
+    font-weight: 100;
+    color: grey;
+    display: block;
+    top: 2rem;
+  }
+
+  .upload-new-work-text{
+    position: relative;
+    width: 100%;
+    height: 2em;
+    font-size: 2em;
+    top: calc(50% - 1em);
+    font-weight: 100;
+    color: grey;
+    display: none;
+  }
 }
+
+.create-new-link:hover{
+  .upload-new-work-plus{
+    display: none;
+  }
+  .upload-new-work-text{
+    display: block;
+  }
+}
+
 
 #work-components-container{
   position: relative;
-  //border: 1px solid green;
+  overflow-x: scroll;
   height: 100%;
   top: 100px;
   white-space: nowrap;
@@ -156,16 +233,28 @@ body{
 }
 
 
-.work-image img {
-  width:100%;
-  vertical-align:top;
+.work-image img{
+  width: 100%;
+  height: auto;
+  //border: 0;
+  //zoom: 1.25;
 }
 
-.work-image img:hover {
+// .iframe-mask{
+//   position: absolute;
+//   top:0;
+//   left:0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 200;
+// }
+
+.work-image:hover img {
   mix-blend-mode: screen;
 }
 
-.work-projects-link:hover + img {
+
+.work-projects-link:hover ~ img {
   mix-blend-mode: screen;
 }
 
@@ -192,6 +281,10 @@ body{
   display: block;
 }
 
+
+.work-edit-btn{
+  text-decoration: none;
+}
 // Another way to center images
 
 //top: 50% ; transform: translateY(-50%);
@@ -205,7 +298,7 @@ body{
 
 }
 
-@media (max-width: 570px){
+@media (max-width: 430px){
     .projects_page{
       flex-wrap: wrap;
     }
@@ -217,9 +310,10 @@ body{
   flex-order: 1;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 400px;
+  flex-basis: 450px;
   background: #fb5353;
-  
+  min-width: 20em;
+  max-width: 28em;
 }
 
 
@@ -255,9 +349,57 @@ body{
 
 .project-section{
   flex-order: 2;
-  flex-grow: 2;
-  flex-shrink: 2.3;
+  flex-grow: 1;
+  flex-shrink: 1;
   flex-basis: 930px;
+}
+
+.project-component{
+  max-width: 28em;
+  min-width: 18em;
+  padding-bottom: 1.5em;
+
+  &.even {
+    padding-left: 1.5em;
+  }
+
+  &.odd {
+    padding-right: 1.5em;
+  }
+}
+
+
+@media (max-width: 768px){
+  .project-component{
+    max-width: 25em;
+    min-width: 18em;
+    padding-top: 1.5em;
+    padding-bottom: 0em;
+  }
+  &.even {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  &.odd{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-top: -1.5em;
+  }
+}
+
+
+
+.project-component img{
+  width: 100%;
+  height: auto;
+}
+
+.create-new-project-link{
+  box-sizing: border-box;
+  border: 2px dashed grey; 
+  height: 225px;
+  max-width: 28em;
+  text-align: center;
 }
 
 //Work Edit Page
@@ -290,6 +432,7 @@ body{
   }
   .upload-new-image-image{
     width: 100%;
+    height: auto;
   }
 }
 
@@ -313,6 +456,11 @@ body{
 
 
 //PROJECTS PAGE//
+
+.project-component__details-title{
+    font-weight:500;
+}
+
 //WORK EDIT PAGE
 .form-container{
   max-width: 500px;
@@ -331,3 +479,71 @@ body{
 .hidden{
   display:none;
 }
+
+
+
+//Projects Image Carasel
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  border-radius: 5px;
+
+  .edit-media-link{
+    box-sizing: border-box;
+    background-color: white;
+    font-weight: 100;
+    border: 2px dashed grey; 
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+    padding-top: 25%;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.8em;
+    color: black; 
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  img{
+  width: 100%;
+  height: auto;
+  }
+
+  iframe{
+  width: 100%;
+  height: 100%;
+  }
+}
+
+.carousel-cell:hover {
+  .edit-media-link{
+    display: block;
+  }
+  img{
+    display: none;
+  }
+
+  iframe{
+    display: none;
+  }
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+}
+
+
+
+
+//Projects Image Carasel
+

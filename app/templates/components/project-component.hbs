@@ -1,18 +1,17 @@
+
 <div class="project-component__image">
-<img src={{mainImage}} alt="{{project.title}}"> 
+  {{project-modal project=project}} 
 </div>
 
 <div class="project-component__details">
-<p class="project-component__details-title">{{project.title}} - {{project.role}}</p>
-<p class="project-component__details-description">{{project.description}}</p>
+  <p class="project-component__details-title">{{project.title}} - {{project.role}}</p>
+  <p class="project-component__details-description">{{project.description}}</p>
 </div>
 
 <p>
 {{#if session.isAuthenticated}}
-
-  {{#link-to 'work.edit.project.edit.media' project.workplace.id project.id}}
+  {{#link-to 'work.edit.project.edit.media' project.workplace.id project.id class="button is-dark work-edit-btn"}}
     Edit Project
   {{/link-to}}
-  
 {{/if}}
-</p>
+</p> 

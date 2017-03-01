@@ -5,14 +5,14 @@ module.exports = function(environment) {
     modulePrefix: 'aileen',
     environment: environment,
     google: {
-      developerKey: "AIzaSyBCOhpxKxUkwlQXWwRwbzsaYs5pmbI9yAY",
-      clientId: "619862406222-ejqjpamted4nb655jv8408kgrvstssbv.apps.googleusercontent.com"
+      developerKey: process.env.GOOGLE_API_KEY,
+      clientId: process.env.GOOGLE_CLIENT_ID
     },
     firebase: {
-      apiKey: "AIzaSyAEc72YACi2i4iiSf7D87mz08aXidSoqUc",
-      authDomain: "aileenzee-5e988.firebaseapp.com",
-      databaseURL: "https://aileenzee-5e988.firebaseio.com",
-      storageBucket: "aileenzee-5e988.appspot.com"
+      apiKey: process.env.FIREBASE_API,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+      databaseURL: process.env.FIREBASE_DATABASE_URL,
+      storageBucket: process.env.FIREBASE_STORAGE_BUCKET
     },
     torii: {
       sessionServiceName:'session',

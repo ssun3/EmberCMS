@@ -1,6 +1,8 @@
 import Ember from 'ember';
+import ENV from "../../../../../../config/environment";
 
 export default Ember.Controller.extend({
+  isEmptyMedia: Ember.computed.equal('mediaURL', ''),
   isImage: Ember.computed('mediaMimeType', function() {
     return this.get("mediaMimeType") === "photo" ? true : false;
   }),
@@ -47,10 +49,10 @@ export default Ember.Controller.extend({
     uploadMedia: function(){
       var self = this;
       // The Browser API key obtained from the Google Developers Console.
-      var developerKey = 'AIzaSyBCOhpxKxUkwlQXWwRwbzsaYs5pmbI9yAY ';
+      var developerKey = ENV.google.developerKey;
 
       // The Client ID obtained from the Google Developers Console. Replace with your own Client ID.
-      var clientId = "619862406222-ejqjpamted4nb655jv8408kgrvstssbv.apps.googleusercontent.com";
+      var clientId = ENV.google.clientId;
 
       // Scope to use to access user's photos.
       var scope = ['https://www.googleapis.com/auth/drive'];

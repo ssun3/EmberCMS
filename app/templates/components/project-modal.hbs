@@ -1,0 +1,12 @@
+<ul id={{project.id}}>
+    {{#each project.images as |image|}}
+    <li> 
+      {{#if image.isImage}}<img src={{image.url}}>{{/if}}
+      {{#if image.isVideo}}<iframe src={{image.url}}></iframe> {{/if}}
+        <div class="saga-description"><h3>Lorem</h3><p>Ipsum dolor sit amet</p></div>
+    </li>
+    {{/each}}
+  
+</ul>
+
+

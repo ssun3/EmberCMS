@@ -1,19 +1,32 @@
-
-
-
- 
+{{#scroll-component}} 
+<div id="hide-scrollbar">
 
 <div id="work-components-container">
   
   <div class="work-component work-head"> 
     <h1>Hi, I'm Aileen. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-  </div>
+
+    <div class="arrow">
+      <img src="/assets/images/Arrow.png">
+    </div>
+    <div class="arrow" id="rightarrow">
+      <img src="/assets/images/Arrow.png">
+    </div>
+  
+    <p class="arrow_instructions">Use your keys to navigate</p>
+  </div> 
+
+
+
 
   {{#if session.isAuthenticated}}
     <div class="work-component">
       <div class="create-new">
-      {{#link-to 'work.new' class="create-new-link"}}
-      +
+
+
+    {{#link-to 'work.new' class="create-new-link"}}
+      <div class="upload-new-work-plus">+</div>
+      <div class="upload-new-work-text">Upload New Image</div>
     {{/link-to}}
       </div>
     </div>
@@ -26,3 +39,5 @@
   
 </div>
 
+</div>
+{{/scroll-component}} 

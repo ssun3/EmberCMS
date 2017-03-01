@@ -27,13 +27,40 @@ define('aileen/tests/components/project-component.jshint.lint-test', ['exports']
     assert.ok(false, 'components/project-component.js should pass jshint.\ncomponents/project-component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/project-component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
+define('aileen/tests/components/project-images-carousel.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/project-images-carousel.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'components/project-images-carousel.js should pass jshint.\ncomponents/project-images-carousel.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/project-images-carousel.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+  });
+});
+define('aileen/tests/components/project-modal.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/project-modal.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'components/project-modal.js should pass jshint.\ncomponents/project-modal.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/project-modal.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+  });
+});
+define('aileen/tests/components/scroll-component.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/scroll-component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'components/scroll-component.js should pass jshint.\ncomponents/scroll-component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/scroll-component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/scroll-component.js: line 5, col 16, Missing semicolon.\n\n3 errors');
+  });
+});
 define('aileen/tests/components/work-component.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
   QUnit.module('JSHint | components/work-component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/work-component.js should pass jshint.\ncomponents/work-component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/work-component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/work-component.js: line 12, col 73, Missing semicolon.\n\n3 errors');
+    assert.ok(false, 'components/work-component.js should pass jshint.\ncomponents/work-component.js: line 1, col 2, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/work-component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/work-component.js: line 12, col 73, Missing semicolon.\n\n3 errors');
   });
 });
 define('aileen/tests/controllers/application.jshint.lint-test', ['exports'], function (exports) {
@@ -60,7 +87,7 @@ define('aileen/tests/controllers/work/edit.jshint.lint-test', ['exports'], funct
   QUnit.module('JSHint | controllers/work/edit.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/work/edit.js should pass jshint.\ncontrollers/work/edit.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit.js: line 10, col 24, Use \'===\' to compare with \'true\'.\ncontrollers/work/edit.js: line 34, col 11, Missing semicolon.\ncontrollers/work/edit.js: line 49, col 11, Missing semicolon.\n\n5 errors');
+    assert.ok(false, 'controllers/work/edit.js should pass jshint.\ncontrollers/work/edit.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit.js: line 11, col 24, Use \'===\' to compare with \'true\'.\ncontrollers/work/edit.js: line 35, col 11, Missing semicolon.\ncontrollers/work/edit.js: line 50, col 11, Missing semicolon.\n\n6 errors');
   });
 });
 define('aileen/tests/controllers/work/edit/project/edit.jshint.lint-test', ['exports'], function (exports) {
@@ -69,7 +96,7 @@ define('aileen/tests/controllers/work/edit/project/edit.jshint.lint-test', ['exp
   QUnit.module('JSHint | controllers/work/edit/project/edit.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/work/edit/project/edit.js should pass jshint.\ncontrollers/work/edit/project/edit.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(false, 'controllers/work/edit/project/edit.js should pass jshint.\ncontrollers/work/edit/project/edit.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit.js: line 10, col 24, Use \'===\' to compare with \'true\'.\n\n3 errors');
   });
 });
 define('aileen/tests/controllers/work/edit/project/edit/media/edit.jshint.lint-test', ['exports'], function (exports) {
@@ -78,7 +105,7 @@ define('aileen/tests/controllers/work/edit/project/edit/media/edit.jshint.lint-t
   QUnit.module('JSHint | controllers/work/edit/project/edit/media/edit.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/work/edit/project/edit/media/edit.js should pass jshint.\ncontrollers/work/edit/project/edit/media/edit.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/edit.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/edit.js: line 110, col 37, Missing semicolon.\n\n3 errors');
+    assert.ok(false, 'controllers/work/edit/project/edit/media/edit.js should pass jshint.\ncontrollers/work/edit/project/edit/media/edit.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/edit.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/edit.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/edit.js: line 8, col 24, Use \'===\' to compare with \'true\'.\ncontrollers/work/edit/project/edit/media/edit.js: line 117, col 37, Missing semicolon.\n\n5 errors');
   });
 });
 define('aileen/tests/controllers/work/edit/project/edit/media/index.jshint.lint-test', ['exports'], function (exports) {
@@ -96,7 +123,7 @@ define('aileen/tests/controllers/work/edit/project/edit/media/new.jshint.lint-te
   QUnit.module('JSHint | controllers/work/edit/project/edit/media/new.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/work/edit/project/edit/media/new.js should pass jshint.\ncontrollers/work/edit/project/edit/media/new.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/new.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/new.js: line 119, col 37, Missing semicolon.\n\n3 errors');
+    assert.ok(false, 'controllers/work/edit/project/edit/media/new.js should pass jshint.\ncontrollers/work/edit/project/edit/media/new.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/new.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/new.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/edit/project/edit/media/new.js: line 121, col 37, Missing semicolon.\n\n4 errors');
   });
 });
 define('aileen/tests/controllers/work/edit/project/new.jshint.lint-test', ['exports'], function (exports) {
@@ -114,7 +141,16 @@ define('aileen/tests/controllers/work/new.jshint.lint-test', ['exports'], functi
   QUnit.module('JSHint | controllers/work/new.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/work/new.js should pass jshint.\ncontrollers/work/new.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/new.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(false, 'controllers/work/new.js should pass jshint.\ncontrollers/work/new.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/new.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/new.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
+  });
+});
+define('aileen/tests/controllers/work/projects.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/work/projects.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/work/projects.js should pass jshint.\ncontrollers/work/projects.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/projects.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/projects.js: line 5, col 62, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/work/projects.js: line 8, col 62, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
   });
 });
 define('aileen/tests/helpers/create-offline-ref', ['exports', 'firebase'], function (exports, _firebase) {
@@ -434,6 +470,120 @@ define('aileen/tests/integration/components/project-component-test.jshint.lint-t
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/project-component-test.js should pass jshint.');
+  });
+});
+define('aileen/tests/integration/components/project-images-carousel-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('project-images-carousel', 'Integration | Component | project images carousel', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': '5bTbi46M',
+      'block': '{"statements":[["append",["unknown",["project-images-carousel"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': 'A6Ags0yu',
+      'block': '{"statements":[["text","\\n"],["block",["project-images-carousel"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('aileen/tests/integration/components/project-images-carousel-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/project-images-carousel-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/project-images-carousel-test.js should pass jshint.');
+  });
+});
+define('aileen/tests/integration/components/project-modal-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('project-modal', 'Integration | Component | project modal', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': 'ri4CscKx',
+      'block': '{"statements":[["append",["unknown",["project-modal"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': 'bbvG0GJh',
+      'block': '{"statements":[["text","\\n"],["block",["project-modal"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('aileen/tests/integration/components/project-modal-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/project-modal-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/project-modal-test.js should pass jshint.');
+  });
+});
+define('aileen/tests/integration/components/scroll-component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('scroll-component', 'Integration | Component | scroll component', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': 'w46AOcwK',
+      'block': '{"statements":[["append",["unknown",["scroll-component"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': 'u7rZ9ML9',
+      'block': '{"statements":[["text","\\n"],["block",["scroll-component"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('aileen/tests/integration/components/scroll-component-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/scroll-component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/scroll-component-test.js should pass jshint.');
   });
 });
 define('aileen/tests/integration/components/work-component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -863,6 +1013,28 @@ define('aileen/tests/unit/controllers/work/new-test.jshint.lint-test', ['exports
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/work/new-test.js should pass jshint.');
+  });
+});
+define('aileen/tests/unit/controllers/work/projects-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:work/projects', 'Unit | Controller | work/projects', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('aileen/tests/unit/controllers/work/projects-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/work/projects-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/work/projects-test.js should pass jshint.');
   });
 });
 define('aileen/tests/unit/helpers/format-date-test', ['exports', 'aileen/helpers/format-date', 'qunit'], function (exports, _aileenHelpersFormatDate, _qunit) {

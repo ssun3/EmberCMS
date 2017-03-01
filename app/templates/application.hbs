@@ -1,12 +1,17 @@
+
+
 <div class="application-container">
+  {{#if session.isAuthenticated}}
+    <button class="button is-dark sign-out-btn" {{action 'signOut'}}>Sign Out</button>
+  {{/if}} 
   {{partial 'navbar'}}
+
+  <div class="outlet-container">
   {{outlet}}
 
-{{!-- {{currentRouteName}}
+  </div>
 
-{{#if session.isAuthenticated}}
-   <button {{action 'signOut'}}>Sign Out</button>
-{{/if}} --}}
+
 
 </div>
 

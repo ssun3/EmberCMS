@@ -1,39 +1,43 @@
  
 <form class="form-container box">
-   <div class="form-control">
-   <div class="control">
-    <label class="label">Project Title</label>
-    {{input type="text" class="input" value=model.title}}
-  </div>
+  
   <div class="control">
-    <label class="label">Project Subtitle</label>
-    {{input type="text" class="input" value=model.subtitle}}
-  </div>
-  <div class="control">
-    <label class="label">Description</label>
-    {{textarea class="textarea" value=model.description}}
-  </div>
-  <div class="control">
-    <label class="label">Role</label>
-    {{input type="test" class="input" value=model.role}}
-  </div>
-  <div class="control">
-    <label class="label">Date</label>
-    {{input type="date" class="input" value=model.date}}
-  </div>
-
-  <br>
-  <br>
-
   {{outlet}}
-  <br>
-  <br>
-  <button class="button is-primary"{{action 'editProject' model.id model.workplace.id}}>Save Project</button>
-
-  <button class="button is-danger" {{action 'deleteProject' model.id model.workplace.id}}>Delete Project</button>
-
-  {{#link-to 'work.projects' model.workplace.id class="button is-link"}}Close{{/link-to}}
   </div>
+  
+  {{#if isProjectEdit}}
+
+
+     <div class="form-control">
+     <div class="control">
+      <label class="label">Project Title</label>
+      {{input type="text" class="input" value=model.title}}
+    </div>
+    <div class="control">
+      <label class="label">Project Subtitle</label>
+      {{input type="text" class="input" value=model.subtitle}}
+    </div>
+    <div class="control">
+      <label class="label">Description</label>
+      {{textarea class="textarea" value=model.description}}
+    </div>
+    <div class="control">
+      <label class="label">Role</label>
+      {{input type="test" class="input" value=model.role}}
+    </div>
+    <div class="control">
+      <label class="label">Date</label>
+      {{input type="date" class="input" value=model.date}}
+    </div>
+    <br>
+
+    <button class="button is-primary"{{action 'editProject' model.id model.workplace.id}}>Save Project</button>
+
+    <button class="button is-danger" {{action 'deleteProjectWarning' model.id model.workplace.id}}>Delete Project</button>
+
+    {{#link-to 'work.projects' model.workplace.id class="button is-link"}}Close{{/link-to}}
+    </div>
+  {{/if}}
 </form>
 
   

@@ -1,4 +1,4 @@
-import Ember from 'ember';
+ import Ember from 'ember';
 
 export default Ember.Component.extend({
   session: Ember.inject.service('session'),
@@ -10,7 +10,5 @@ export default Ember.Component.extend({
   }),
   isProjectsPlural: Ember.computed('work.projects.length', function(){
     return this.get('work.projects.length') > 1 ? "projects" : "project"
-  })  
-  
-
+  })
 });

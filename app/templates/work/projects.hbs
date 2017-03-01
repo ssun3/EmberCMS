@@ -10,19 +10,29 @@
   </div>
 
   <div class="project-section">
-    {{#if session.isAuthenticated}}
-      <div class="project-component">
-        <div class="create-new">
-        {{#link-to 'work.edit.project.new' model.id class="create-new-link"}}
-        +
-      {{/link-to}}
-        </div>
+    <div class="columns">
+      <div class="column is-six">
+        {{#if session.isAuthenticated}}
+          <div class="project-component even">
+            <div class="create-new-project-link">
+            {{#link-to 'work.new' class="create-new-link"}}
+              <div class="upload-new-work-plus">+</div>
+              <div class="upload-new-work-text">Upload New Project</div>
+            {{/link-to}}
+            </div>
+          </div>
+        {{/if}}
+      {{#each evenProjects as |project|}}
+        {{project-component project=project class="project-component even"}}
+      {{/each}}
       </div>
-    {{/if}}
-  {{#each model.projects as |project|}}
-    {{project-component project=project class="project-component"}}
-  {{/each}}
 
+    <div class="column is-six">
+      {{#each oddProjects as |project|}}
+        {{project-component project=project class="project-component odd"}}
+      {{/each}}
+     </div>
+    </div>
   </div>
 
 </div>

@@ -1,0 +1,12 @@
+<div class="main-carousel carousel">
+  {{#each model.images as |image|}}
+    <div class="carousel-cell">
+    {{#if image.isImage}}<img src={{image.url}}>{{/if}}
+    {{#if image.isVideo}}<iframe src={{image.url}}></iframe> {{/if}}
+
+    {{#link-to "work.edit.project.edit.media.edit" image.id class="edit-media-link"}}Edit Media {{/link-to}}
+
+
+    </div>
+  {{/each}}
+</div>

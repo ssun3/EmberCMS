@@ -1,6 +1,9 @@
 <div class="work-image">
 
-    {{#link-to 'work.projects' work.id}}<p class="work-projects-link">View Projects</p><img src={{work.image}} alt="{{work.workplace}}">{{/link-to}}
+    {{#link-to 'work.projects' work.id}}
+      <p class="work-projects-link">View Projects</p>
+      <img src={{work.image}}>
+    {{/link-to}}
 
 
 </div>
@@ -14,13 +17,12 @@
 
       
 
-      <p>
-      {{#if session.isAuthenticated}}
 
-        {{#link-to 'work.edit' work.id}}
-          Edit WORK
-        {{/link-to}}
-        
-      {{/if}}
-      </p>
-     
+{{#if session.isAuthenticated}}
+
+  {{#link-to 'work.edit' work.id class="button is-dark work-edit-btn"}}
+    Edit Work
+  {{/link-to}}
+  
+{{/if}}
+

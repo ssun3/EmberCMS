@@ -1,7 +1,17 @@
 import Ember from 'ember';
 
+ 
 export default Ember.Controller.extend({
+  applicationController: Ember.inject.controller('application'),
+  isProjectEdit: Ember.computed.alias('applicationController.isProjectEditRoute'),
   actions: {
+    deleteProjectWarning: function(projectID, workID){
+      var isDeleteOkay = confirm("Are you sure?");
+      if (isDeleteOkay == true) {
+        this.send('deleteProject', projectID, workID);
+      }
+    },
+
     editProject: function(projectID, workID){
       var self = this;
       var title = this.get('model.title'); 

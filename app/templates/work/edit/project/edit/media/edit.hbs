@@ -1,32 +1,32 @@
-<p>EDIT MEDIA PAGE</p>
- 
+
 <form id="edit-project-form">
-  <div class="form-group">
-    <label>Title</label>
-    {{input type="text" class="form-control" value=model.title}}
-  </div>
-  <div class="form-group">
-    <label>Description</label>
-    {{textarea class="form-control" value=model.description}}
-  </div>
-
-  <button {{action 'changeMedia' model.id}}>change media</button>
-{{!--   <div class="form-group">
-    <label>Is Main Image?</label>
-    {{input type="checkbox" name="isMainImage" class="form-control" checked=isMainImage}}
-  </div> --}}
 
 
-  <div class="detail-work-image">
-  {{#if model.isVideo}}<iframe src={{model.url}} width="640" height="480"></iframe> {{/if}}
-  {{#if model.isImage}}<img src={{model.url}}>{{/if}}
+<div class="upload-new-image">
+  {{#if model.isVideo}}<iframe src={{model.url}} class="upload-new-image-image"></iframe> {{/if}}
+  {{#if model.isImage}}<img src={{model.url}} class="upload-new-image-image">{{/if}}
+  <button class="upload-new-image-text" {{action "changeMedia" model.id}}>Change Media</button>
   </div>
 
-  
 
-  <button {{action 'editMedia' model.id}}>Save Media</button>
-  <button {{action 'deleteMedia' model.id model.project.id}}>Delete Media</button>
-  {{#link-to 'work.edit.project.edit.media.index'}}Close{{/link-to}}
+  <div class="form-control">
+    <div class="control">
+      <label class="label">Title</label>
+      {{input type="text" class="input" value=model.title}}
+    </div>
+    <div class="control">
+      <label class="label">Description</label>
+      {{textarea class="textarea" value=model.description}}
+    </div>
+
+
+    <div class="control">
+      <br>
+      <button class="button is-primary" {{action 'editMedia' model.id}}>Save Media</button>
+      <button class="button is-danger" {{action 'deleteMediaWarning' model.id model.project.id}}>Delete Media</button>
+      {{#link-to 'work.edit.project.edit.media.index' class="button is-link" }}Close{{/link-to}}
+    </div>
+  </div>
 </form>
 
 

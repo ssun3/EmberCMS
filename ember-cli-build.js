@@ -4,12 +4,23 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    dovEnv: {
+      clientAllowedKeys: ['GOOGLE_API_KEY', 'GOOGLE_CLIENT_ID', 'FIREBASE_API', 'FIREBASE_AUTH_DOMAIN', 'FIREBASE_DATABASE_URL', 'FIREBASE_STORAGE_BUCKET']
+    }
     // Add options here
   });
 
   app.import('bower_components/moment/min/moment.min.js');
 
+  app.import('bower_components/flickity/dist/flickity.pkgd.js');
 
+  app.import('bower_components/jquery/dist/jquery.min.js');
+
+  app.import('bower_components/mousetrap/mousetrap.min.js');
+
+  app.import('bower_components/saga-gallery/dist/saga-gallery.min.css');
+
+  app.import('bower_components/saga-gallery/dist/saga-gallery.min.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

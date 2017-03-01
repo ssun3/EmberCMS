@@ -1,17 +1,12 @@
-{{#link-to 'work.edit.project.edit.media.new'}}
-ADD MEDIA
+{{#if model.images}}
+<br>
+{{project-images-carousel model=model}}
+<br> 
+{{/if}}
+
+{{#link-to 'work.edit.project.edit.media.new' class="button is-dark" }}
+  Add New Media
 {{/link-to}}
-
-<br>
-<br>
-
-
-{{#each model.images as |image|}}
-  <p>{{image.title}}</p> {{#link-to "work.edit.project.edit.media.edit" image.id}}Edit Media {{/link-to}}
-  {{#if image.isImage}}<img src={{image.url}}>{{/if}}
-  {{#if image.isVideo}}<iframe src={{image.url}} width="640" height="480"></iframe> {{/if}}
-{{/each}}
-
 
 
 
